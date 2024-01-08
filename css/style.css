@@ -1,0 +1,168 @@
+/** This is a master css file for eexcess pages
+    all pages should include first this css, and then
+    their own. The base color for the scheme design is #1d904e 
+    This file should not contain definitions below class level.
+*/
+
+body,html {
+    height:100%;
+    margin:0;
+    padding:0;
+    
+    font-family: Verdana, Geneva,sans-serif;
+}
+
+body {
+    background-image: url('../watermark.png');
+    background-size: auto 95%;
+    font-size:0.8em;
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+
+body a{
+    text-decoration:none;
+    color: #529CBF;	
+}
+
+header {
+    /*margin-top:30px; width:500px;*/ 
+    background:white; 
+    margin-left: 10%; 
+    margin-right:auto; 
+    /*padding-bottom:20px;*/ 
+    padding-bottom: 35px;   
+}
+
+
+
+section {
+    clear:both;
+    width:60%;
+    padding-left: 10em;
+}
+
+
+
+h3 {
+    font-size: 116%;
+    border-bottom: none;
+    font-weight: bold;
+    overflow:hidden;
+    padding-top: .5em;
+    padding-bottom:.17em;
+    padding-right: 5em;
+    width: 30%;
+    display:inline;
+
+}
+
+
+.section-item{
+    border-top: 1px solid #a1a1a1;
+    padding-top: .5em;
+    margin-top: 3em;
+}
+
+
+.section-item #sched-wrap{
+    margin-left: 15%;
+
+}
+
+.sched-item {
+    margin-bottom:2em;
+
+}
+.sched-header{
+/*    border: 1px solid #a1a1a1;*/
+    border-radius: 5px;
+    background-color: #eeeeee;
+    padding-top: .1em;
+    padding-bottom:.1em;
+}
+
+.sched-header span{
+    float:right;
+    padding-right: 3em;
+    
+}
+
+
+.sched-item ul{
+/*    display:inline;*/
+    font-weight:bold;
+}
+
+.sched-item ul li{
+    font-weight:normal;
+    list-style-type: none;
+    padding-left: 3em;
+}
+
+.person-photo{
+    float:left;
+
+    padding-right:10px;
+}
+
+
+.person-photo img{
+    width: 100px;
+}
+
+.person{
+    clear:both;
+}
+
+#people-fixed .person{
+    margin-left:15%;
+}
+.invited-talk {
+    border-top: 1px dotted #a1a1a1;    
+    margin-left:15%;
+}
+
+
+
+.invited-talk-title,  .invited-talk-date{
+    display:inline-block;
+}
+
+.invited-talk-date{
+    float:right;
+    padding-right: 3em;
+}
+
+.invited-talk-abstract {
+    margin-top:.7em;
+    margin-bottom:.7em;
+}
+
+.invited-talk h4, #people-fixed h4{
+    display:inline;
+}
+
+.person-name {
+    padding-top:.7em;
+}
+
+.person {
+    padding-top: .5em;
+    padding-bottom: 1em;
+}
+
+
+
+#grading-content, #lecture-lit-contents{
+    margin-left:15%;
+}
+
+#lecture-lit-contents div p{
+    margin-left:2em;
+}
+
+#is-not-content, #who-should-content{
+    margin-left:15%;
+}
