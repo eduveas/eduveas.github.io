@@ -1,0 +1,178 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body { 
+    font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#777;
+	font-weight:300;
+	}
+
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+  color:#222;
+}
+h1 {
+  font-size:28px;
+}
+
+h2 {
+  color:#393939;
+}
+
+
+h3, h4, h5, h6 {
+  color:#494949;
+  letter-spacing: 1px; 
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #39c;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #39a;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #39c;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.page-wrapper { 
+
+    width: 70%;
+	margin: 0 auto; 
+/*    padding: 0 300px 0 110px;
+	position: relative;*/
+	}
+
+
+.about-me {
+    
+    display: flex;
+}
+
+.person-photo{
+    padding-right: 10px;
+    flex:1;
+}
+
+.person-photo img{
+    border-radius: 20px;
+}
+
+.person-addresses{
+    padding-right: 5px;
+    flex:2;
+}
+
+.person-links{
+    padding-right: 5px;
+    flex:3;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;    
+    text-transform: uppercase;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu a{
+    font-weight: normal;
+    color:#393939;
+    
+}
+
+.menu h3{
+    display: none;
+}
+
+.menu ul{
+   display: inline;
+    list-style: none;
+
+}
+
+.menu ul li{
+    display: inline;
+    border-right: 1px solid #ddd;
+    padding-left: 5px;
+}
+
+.menu ul li:last-child{
+    border-right: none;
+}
+
+
+
+.content a{
+    font-weight: normal;
+}
+
+.content span{
+    color: #39c;
+}
+
+#goal{
+    background-color:#EEEEEE;
+    color:#393939;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.research img{
+    width: 100%;
+ object-fit: contain;
+}
+
+.pubs{
+     line-height: normal;
+}
+
+.pubs .pub{
+    display: flex;
+  align-items: center | baseline  + ... safe | unsafe;
+}
+
+.pubs .pub-photo img{
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+
