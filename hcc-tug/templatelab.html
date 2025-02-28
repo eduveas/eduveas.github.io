@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Human Interaction Lab - HCC Labs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Immersive Computing Lab Color Scheme */
+    :root {
+      --lab-primary: #3A86FF;
+      --lab-secondary: #83a8ec;
+      --background-light: #ffffff;
+      --text-light: #000000;
+      --background-dark: #1a1a1a;
+      --text-dark: #ffffff;
+    }
+
+    /* Light/Dark Mode */
+    body.light-scheme {
+      background-color: var(--background-light);
+      color: var(--text-light);
+    }
+
+    body.dark-scheme {
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+    }
+
+    /* Navbar with Lab Color Scheme */
+    .navbar.is-primary {
+      background-color: var(--lab-primary);
+    }
+
+    .navbar.is-primary .navbar-item {
+      color: white;
+    }
+
+    .navbar.is-primary .navbar-item:hover {
+      background-color: var(--lab-secondary);
+    }
+
+    .hero.is-immersive {
+      background: linear-gradient(to bottom, rgba(58, 134, 255, 0.2), rgba(131, 168, 236, 0.5)), url('img/vhil-hero.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .hero.is-immersive .title,
+    .hero.is-immersive .subtitle {
+      color: white; /* Explicitly set text color to white */
+    }
+
+    .section-header {
+      color: var(--lab-primary);
+      margin-bottom: 2rem;
+    }
+
+    .research-card {
+      border: 1px solid var(--lab-primary);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      background-color: #2a2a2a; /* Dark gray background for dark mode */
+      color: white; /* White text for dark mode */
+    }
+
+    .research-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Buttons using lab color scheme */
+    .button.is-primary {
+      background-color: var(--lab-primary);
+      color: white;
+      border: none;
+    }
+
+    .button.is-primary:hover {
+      background-color: var(--lab-secondary);
+    }
+
+    .cta-button {
+      background-color: var(--lab-primary);
+      color: white;
+      border: none;
+    }
+
+    .cta-button:hover {
+      background-color: var(--lab-secondary);
+    }
+
+    .publication-item {
+      margin-bottom: 2rem;
+    }
+
+    .publication-thumbnail {
+      width: 150px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .publication-links a {
+      margin-right: 1rem;
+      color: var(--lab-primary);
+      text-decoration: none;
+    }
+
+    .publication-links a:hover {
+      color: var(--lab-secondary);
+    }
+
+    .mode-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .mission-vision-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .mission-vision-image {
+      flex: 1;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .mission-vision-image:hover {
+      opacity: 1;
+    }
+
+    .mission-vision-content {
+      flex: 2;
+      padding-left: 2rem;
+    }
+
+    /* Dark gradient background for sections */
+    .section {
+      background: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+      color: white;
+      padding: 4rem 1.5rem;
+    }
+
+    /* Latest Achievements Section */
+    .latest-achievements .card {
+      background-color: #2a2a2a;
+      border: 1px solid var(--lab-primary);
+      color: white;
+    }
+
+    .latest-achievements .card .title,
+    .latest-achievements .card .subtitle {
+      color: white;
+    }
+
+    /* Embedded Media */
+    .embedded-media {
+      margin-top: 1rem;
+    }
+
+    .embedded-media iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="dark-scheme">
+
+  <!-- Light/Dark Mode Switch -->
+  <div class="mode-switch">
+    <button class="button is-primary" id="modeToggle">
+      <span class="icon">
+        <i class="fas fa-moon"></i>
+      </span>
+    </button>
+  </div>
+
+  <!-- Top Navbar -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#infrastructure">Infrastructure</a>
+        <a class="navbar-item" href="#work-with-us">Work With Us</a>
+        <a class="navbar-item" href="#sponsor-this-lab">Sponsor This Lab</a>
+        <a class="navbar-item" href="https://hcc-lab.com">HCC Landing Page</a>
+        <a class="navbar-item" href="https://tugraz.at">TUGRAZ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero is-medium is-immersive">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">Vehicle Human Interaction Lab</h1>
+        <h2 class="subtitle is-4">Human-Centered Computing @ Graz University of Technology</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="section">
+    <div class="container mission-vision-container">
+      <div class="mission-vision-content">
+        <h2 class="title is-2 section-header">Mission & Vision</h2>
+        <div class="content">
+          <p>
+            At the Vehicle-Human Interaction Lab, we pioneer human-centered AI to advance high-performance tasks by fostering a bidirectional exchange between human expertise and artificial intelligence. Our mission is to understand the cognitive and physiological processes underlying elite human performance and leverage this knowledge to design AI systems that learn from and with humans. By integrating physiological sensing, cognitive modeling, and deep reinforcement learning, we aim to create AI agents capable of adaptive decision-making and skill transfer in dynamic, high-paced environments. Our work enhances safety, sustainability, and performance by testing AI-driven innovations in high-fidelity simulations and real-world applications, ensuring that AI not only learns from the best human strategies but also helps refine and extend human capabilities.
+          </p>
+          <p>
+            We envision a future where humans and AI collaborate seamlessly, pushing the boundaries of high-performance tasks. Through interdisciplinary research, we seek to develop AI that augments human abilities, fosters safer and more efficient decision-making, and accelerates sustainable innovation in autonomous systems and beyond.
+          </p>
+        </div>
+      </div>
+      <div class="mission-vision-image">
+        <img src="img/mission-vision-image.jpg" alt="Mission & Vision Image" style="width: 100%; border-radius: 10px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Research Areas Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 section-header">Key Research Areas</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="card research-card">
+            <div class="card-content">
+              <h3 class="title is-4">Human Performance Modeling</h3>
+              <p class="subtitle is-6">
+                Investigating the physiological and cognitive processes underlying elite human performance, leveraging sensor data and computational models to enhance decision-making, adaptability, and human-AI collaboration in high-paced environments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card research-card">
+            <div class="card-content">
+              <h3 class="title is-4">AI Drivers for Autonomous Racing</h3>
+              <p class="subtitle is-6">
+                Developing high-performance AI drivers through deep reinforcement learning, testing innovations in high-fidelity simulations, and facilitating bidirectional skill transfer between humans and AI for safer, more efficient, and sustainable mobility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Achievements Section -->
+  <section class="section latest-achievements">
+    <div class="container">
+      <h2 class="title is-2 section-header">Latest Achievements</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">"The Racer's Gaze Keypoints"</p>
+              <p class="subtitle is-6">We introduced a novel visualization concept, Gaze Keypoint events and locations, to integrate eye, head, telemetry, and localization data.</p>
+              <div class="embedded-media">
+                <!-- Example YouTube Embed -->
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+              </div>
+              <a href="https://osf.io/nze3p" class="button is-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Autonomous Racing Benchmark</p>
+              <p class="subtitle is-6">Our team created a high-fidelity benchmark with AI algorithms for autonomous racing.</p>
+              <div class="embedded-media">
+                <!-- Example LinkedIn Embed -->
+                <iframe src="https://www.linkedin.com/embed/feed/post/POST_ID" allowfullscreen></iframe>
+              </div>
+              <a href="https://youtu.be/-NY_MsebsJk" class="button is-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Human Telemetry</p>
+              <p class="subtitle is-6">Our team developed a platform for physiological data collection synchronized with high fidelity simulation.</p>
+              <div class="embedded-media">
+                <!-- Example YouTube Embed -->
+                <iframe src="https://www.youtube.com/embed/qCvFA2awrZg" allowfullscreen></iframe>
+              </div>
+              <a href="https://www.youtube.com/watch?v=qCvFA2awrZg" class="button is-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 section-header">Publications</h2>
+      <div class="publication-item">
+        <div class="columns">
+          <div class="column is-2">
+            <img src="img/formularace.avif" alt="Publication Thumbnail" class="publication-thumbnail">
+          </div>
+          <div class="column is-8">
+            <p class="title is-4">A Simulation Benchmark for Autonomous Racing with Large-Scale Human Data</p>
+            <p class="subtitle is-6">Remonda, Hansen, Raji, Musiu, Bertogna, Veas, Wang, Neural Information Processing Systems NeurIPS, 2024</p>
+            <div class="publication-links">
+              <a href="https://assetto-corsa-gym.github.io/"><i class="fas fa-link"></i> Project</a>
+              <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/b91ea2ba1b6521940e204b7b81d5ef47-Abstract-Datasets_and_Benchmarks_Track.html"><i class="fas fa-file-alt"></i> Paper</a>
+              <a href="https://github.com/dasGringuen/assetto_corsa_gym"><i class="fas fa-code"></i> Code</a>
+              <a href="https://huggingface.co/datasets/dasgringuen/assettoCorsaGym"><i class="fas fa-database"></i> Data</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="publication-item">
+        <div class="columns">
+          <div class="column is-2">
+            <img src="img/racers-gaze.avif" alt="Publication Thumbnail" class="publication-thumbnail">
+          </div>
+          <div class="column is-8">
+            <p class="title is-4">The Racer's Gaze: Visual Strategy in High-Speed Sports Expertise</p>
+            <p class="subtitle is-6">Lappi, Pekkanen, Krajnc, Iacono, Remonda Veas, UNDER REVIEW</p>
+            <div class="publication-links">
+              <a href="#"><i class="fas fa-link"></i> Project</a>
+              <a href="https://doi.org/10.31234/osf.io/j2nu9"><i class="fas fa-file-alt"></i> Paper</a>
+              <a href="https://osf.io/qcu7t/"><i class="fas fa-code"></i> Code</a>
+              <a href="https://osf.io/nze3p"><i class="fas fa-database"></i> Data</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Groups Using This Lab Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 section-header">Collaborators and Groups Working in this Lab</h2>
+      <div class="content">
+        <p>
+          The Vehicle Human Interaction Lab is utilized by various research groups and teams working on cutting-edge projects:
+        </p>
+        <ul>
+          <li>Prof. Otto Lappi, University of Helsinki</li>
+          <li>TU Graz Racing Team</li>
+          <li>AI-Human Interaction Group</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-2 section-header">Collaborate With Us</h2>
+      <p class="subtitle is-5">
+        Interested in our research or want to collaborate? Reach out to us and join our mission to redefine elite performance.
+      </p>
+      <a class="button is-large cta-button" href="#contact">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; 2023 Vehicle Human Interaction Lab, HCC Labs, TU Graz</p>
+      <p>Head of Lab: <a href="https://eduveas.github.io" target="_blank">Eduard Veas</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Light/Dark Mode Toggle
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-scheme');
+      body.classList.toggle('dark-scheme');
+      const icon = modeToggle.querySelector('.icon i');
+      if (body.classList.contains('light-scheme')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+  </script>
+</body>
+</html>

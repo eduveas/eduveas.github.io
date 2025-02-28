@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!-- Existing meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>Immersive Computing Lab - HCC Labs | Graz University of Technology</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="The Immersive Computing Lab at Graz University of Technology focuses on cutting-edge research in AI, AR/VR, Robotics, and Human-Centered Computing. Explore our projects, infrastructure, and collaborations in telepresence, embodied AI, and humanoid robots.">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="Immersive Computing, AI, AR, VR, Robotics, Humanoid Robots, Embodied AI, Telepresence, Human-Centered Computing, HCC Labs, Graz University of Technology, Research Sponsorship, AR/VR Research, AI-Driven Interaction, Neurophysiological Impact, Extended Reality, XR, Digital Twins, Remote Collaboration">
+
+  <!-- Author -->
+  <meta name="author" content="Eduardo Veas, Immersive Computing Lab">
+
+  <!-- Open Graph Tags for Social Media Sharing -->
+  <meta property="og:title" content="Immersive Computing Lab - HCC Labs | Graz University of Technology">
+  <meta property="og:description" content="The Immersive Computing Lab at Graz University of Technology focuses on cutting-edge research in AI, AR/VR, Robotics, and Human-Centered Computing. Explore our projects, infrastructure, and collaborations in telepresence, embodied AI, and humanoid robots.">
+  <meta property="og:image" content="https://your-website-url/img/icl-hero.jpg"> <!-- Replace with your actual image URL -->
+  <meta property="og:url" content="https://your-website-url/icl.html"> <!-- Replace with your actual page URL -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Immersive Computing Lab - HCC Labs | Graz University of Technology">
+  <meta name="twitter:description" content="The Immersive Computing Lab at Graz University of Technology focuses on cutting-edge research in AI, AR/VR, Robotics, and Human-Centered Computing. Explore our projects, infrastructure, and collaborations in telepresence, embodied AI, and humanoid robots.">
+  <meta name="twitter:image" content="https://your-website-url/img/icl-hero.jpg"> <!-- Replace with your actual image URL -->
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://your-website-url/icl.html"> <!-- Replace with your actual page URL -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://your-website-url/favicon.ico"> <!-- Replace with your actual favicon URL -->
+
+<!-- Updated Meta Description -->
+<meta name="description" content="Support cutting-edge research in AI, AR/VR, Robotics, and Human-Centered Computing at the Immersive Computing Lab, Graz University of Technology. Sponsor our innovative projects or make a direct donation to advance immersive technologies and human-robot collaboration.">
+
+<!-- Updated Keywords -->
+<meta name="keywords" content="Immersive Computing, AI, AR, VR, Robotics, Humanoid Robots, Embodied AI, Telepresence, Human-Centered Computing, Research Sponsorship, Donate to Research, Philanthropy, Business Angels, Corporate Sponsorship, Technology Innovation, Graz University of Technology, HCC Labs, Eduardo Veas">
+
+<!-- Open Graph Tags for Sponsors -->
+<meta property="og:title" content="Support Immersive Computing Research | Sponsor or Donate Today">
+<meta property="og:description" content="Join us in advancing AI, AR/VR, and Robotics research. Sponsor innovative projects or make a direct donation to the Immersive Computing Lab at Graz University of Technology.">
+<meta property="og:image" content="https://your-website-url/img/sponsor-hero.jpg"> <!-- Use an image that resonates with sponsors -->
+<meta property="og:url" content="https://your-website-url/icl.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Tags for Sponsors -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Support Immersive Computing Research | Sponsor or Donate Today">
+<meta name="twitter:description" content="Join us in advancing AI, AR/VR, and Robotics research. Sponsor innovative projects or make a direct donation to the Immersive Computing Lab at Graz University of Technology.">
+<meta name="twitter:image" content="https://your-website-url/img/sponsor-hero.jpg">
+
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <style>
+      /* Immersive Computing Lab Color Scheme */
+      :root {
+	  --lab-primary: #3A86FF;
+	  --lab-secondary: #83a8ec;
+	  --background-light: #ffffff;
+	  --text-light: #000000;
+	  --background-dark: #1a1a1a;
+	  --text-dark: #ffffff;
+      }
+      /* Style for Roman-numbered list */
+      .rlist {
+	  list-style-type: lower-roman; /* Use Roman numerals */
+	  padding-left: 1rem; /* Add some padding for better spacing */
+      }
+
+      /* Optional: Add some styling for list items */
+      .rlist li {
+	  margin-bottom: 0.5rem; /* Add space between list items */
+	  color: white; /* Ensure text is white for dark mode */
+      }
+      
+      /* Light/Dark Mode */
+      body.light-scheme {
+	  background-color: var(--background-light);
+	  color: var(--text-light);
+      }
+
+      body.dark-scheme {
+	  background-color: var(--background-dark);
+	  color: var(--text-dark);
+      }
+
+      /* Navbar with Lab Color Scheme */
+      .navbar.is-primary {
+	  background-color: var(--lab-primary);
+      }
+
+      .navbar.is-primary .navbar-item {
+	  color: white;
+      }
+
+      .navbar.is-primary .navbar-item:hover {
+      background-color: var(--lab-secondary);
+      }
+
+      .hero.is-immersive {
+	  background: linear-gradient(to bottom, rgba(58, 134, 255, 0.2), rgba(131, 168, 236, 0.5)), url('img/icl-hero.jpg') no-repeat center center/cover;
+	  color: white;
+      }
+
+      .hero.is-immersive .title,
+      .hero.is-immersive .subtitle {
+	  color: white; /* Explicitly set text color to white */
+      }
+
+      .section-header {
+	  color: var(--lab-primary);
+	  margin-bottom: 2rem;
+      }
+
+      .section {
+	  background: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+      color: white;
+      padding: 4rem 1.5rem;
+      }
+
+      .section .card{
+	  background: linear-gradient(to bottom, rgba(26, 26, 26, 0.2), rgba(52, 52, 52, 0.5));
+	  color: white;
+
+      }
+      .section .card-content{
+	  color: white;
+      }
+
+      .section .card .subtitle {
+	  color:white
+      }
+
+
+      
+      .research-card {
+	  border: 1px solid var(--lab-primary);
+	  border-radius: 10px;
+	  transition: transform 0.3s ease;
+	  background-color: #2a2a2a; /* Dark gray background for dark mode */
+	  color: white; /* White text for dark mode */
+      }
+
+      /* Key Research Areas Section - Font Color */
+      .research-card .card-content .title,
+      .research-card .card-content .subtitle {
+      color: white; /* Ensure white text for better contrast in dark mode */
+      }
+
+      .research-card:hover {
+      transform: scale(1.05);
+      }
+
+      /* Buttons using lab color scheme */
+      .button.is-primary {
+      background-color: var(--lab-primary);
+      color: white;
+      border: none;
+      }
+
+      .button.is-primary:hover {
+      background-color: var(--lab-secondary);
+      }
+
+      .cta-button {
+      background-color: var(--lab-primary);
+      color: white;
+      border: none;
+      }
+
+      .cta-button:hover {
+      background-color: var(--lab-secondary);
+      }
+
+
+      
+      .publication-item {
+      margin-bottom: 2rem;
+
+      }
+
+      /* Publications Section - Font Color */
+      .publication-item .title,
+      .publication-item .subtitle {
+      color: white; /* Ensure white text for better contrast in dark mode */
+      }
+
+
+      .publication-thumbnail {
+      width: 150px;
+      height: auto;
+      border-radius: 5px;
+      }
+
+      .publication-links a {
+      margin-right: 1rem;
+      color: var(--lab-primary);
+      text-decoration: none;
+      }
+
+      .publication-links a:hover {
+      color: var(--lab-secondary);
+      }
+
+      .mode-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      }
+
+      .mission-vision-container {
+      display: flex;
+      align-items: center;
+      }
+
+      .mission-vision-image {
+      flex: 1;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      }
+
+      .mission-vision-image:hover {
+      opacity: 1;
+      }
+
+      .mission-vision-content {
+      flex: 2;
+      padding-left: 2rem;
+      }
+
+      /* Dark gradient background for sections */
+      .section {
+      background: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+      color: white;
+      padding: 4rem 1.5rem;
+      }
+
+      /* Latest Achievements Section */
+      .latest-achievements .card {
+      background-color: #2a2a2a;
+      border: 1px solid var(--lab-primary);
+      color: white;
+      }
+
+      .latest-achievements .card .title,
+      .latest-achievements .card .subtitle {
+      color: white;
+      }
+
+      /* Embedded Media */
+      .embedded-media {
+      margin-top: 1rem;
+      }
+
+      .embedded-media iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      }
+
+      
+      /* Footer - Dark Mode */
+      .footer {
+      background-color: var(--background-dark); /* Use dark background color */
+      color: white; /* Ensure text is white for contrast */
+      }
+
+      @media (max-width: 768px) {
+      .footer-content {
+      flex-direction: column; /* Stack vertically */
+      align-items: flex-end; /* Align to the right */
+      }
+
+      .footer-text {
+      text-align: right; /* Ensure text is right-aligned */
+      }
+      }
+
+
+      /* Flexbox container for video and text */
+      .video-text-container {
+      display: flex;
+      flex-direction: row; /* Side by side on larger screens */
+      align-items: flex-start; /* Align items at the top */
+      gap: 2rem; /* Space between video and text */
+      }
+
+      /* Video container */
+      .video-container {
+      flex: 1; /* Take up 1 part of the space */
+      max-width: 50%; /* Limit video width to 50% of the container */
+      }
+
+      /* Text container */
+      .text-container {
+      flex: 1; /* Take up 1 part of the space */
+      }
+
+      /* Responsive video */
+      .responsive-video {
+      width: 100%; /* Make video responsive */
+      height: auto; /* Maintain aspect ratio */
+      aspect-ratio: 16 / 9; /* Standard video aspect ratio */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      }
+
+      /* Stack video and text vertically on smaller screens */
+      @media (max-width: 768px) {
+      .video-text-container {
+      flex-direction: column; /* Stack vertically on mobile */
+      }
+
+      .video-container {
+      max-width: 100%; /* Full width on mobile */
+      }
+      }
+
+
+      /* Flexbox container for image and text */
+      .image-text-container {
+      display: flex;
+      flex-direction: row; /* Side by side on larger screens */
+      align-items: flex-start; /* Align items at the top */
+      gap: 2rem; /* Space between image and text */
+      }
+
+      /* Image container */
+      .image-container {
+      flex: 1; /* Take up 1 part of the space */
+      max-width: 50%; /* Limit image width to 50% of the container */
+      }
+
+      /* Text container */
+      .text-container {
+      flex: 1; /* Take up 1 part of the space */
+      }
+
+      /* Responsive image */
+      .responsive-image {
+      width: 100%; /* Make image responsive */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      }
+
+      /* Stack image and text vertically on smaller screens */
+      @media (max-width: 768px) {
+      .image-text-container {
+      flex-direction: column; /* Stack vertically on mobile */
+      }
+
+      .image-container {
+      max-width: 100%; /* Full width on mobile */
+      }
+      }
+
+
+      
+      /* Ensure the modal is centered and responsive */
+      .modal-card {
+      width: 80%; /* Adjust the width as needed */
+      max-width: 800px; /* Maximum width for larger screens */
+      }
+
+      /* Style the list */
+      .modal-card-body ul {
+      background-dark: #2a2a2a;
+
+      list-style-type: disc; /* Use bullet points for the list */
+      padding-left: 2rem; /* Add some padding for better readability */
+      }
+
+      /* Style the image */
+      .modal-card-body img {
+      max-width: 100%; /* Ensure the image is responsive */
+      height: auto; /* Maintain aspect ratio */
+      }
+
+      /* Dark Modal Background */
+      .modal-background {
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+      }
+
+      /* Dark Modal Card */
+      .modal-card {
+      background-color: #2a2a2a; /* Dark gray background */
+      color: white; /* White text for contrast */
+      }
+
+      /* Dark Modal Header */
+      .modal-card-head {
+      background-color: #1a1a1a; /* Slightly darker gray for header */
+      border-bottom: 1px solid #444; /* Subtle border */
+      }
+
+      .modal-card-title {
+      color: white; /* White text for title */
+      }
+
+      /* Dark Modal Body */
+      .modal-card-body {
+      background-color: #2a2a2a; /* Dark gray background */
+      color: white; /* White text for contrast */
+      }
+
+      /* Dark Modal Footer */
+      .modal-card-foot {
+      background-color: #1a1a1a; /* Slightly darker gray for footer */
+      border-top: 1px solid #444; /* Subtle border */
+      }
+
+      /* Style the close button */
+      .delete {
+      background-color: transparent;
+      color: white; /* White close button */
+      }
+
+      .delete:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+      }
+
+      /* Style the list */
+      .modal-card-body ul {
+      list-style-type: disc; /* Use bullet points for the list */
+      padding-left: 2rem; /* Add some padding for better readability */
+      color: white; /* Ensure list text is white */
+      }
+
+      /* Style the image */
+      .modal-card-body img {
+      max-width: 100%; /* Ensure the image is responsive */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 10px; /* Optional: Add rounded corners */
+      }
+
+
+      /* Style form inputs */
+      .input, .textarea {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid #444;
+      }
+
+      .input:focus, .textarea:focus {
+      border-color: #3A86FF;
+      box-shadow: 0 0 0 0.125em rgba(58, 134, 255, 0.25);
+      }
+
+      /* Sponsors Section */
+      #sponsors {
+      background-color: #2a2a2a; /* Dark background for dark mode */
+      padding: 4rem 1.5rem;
+      }
+
+      .section-header {
+      color: #3A86FF; /* Use your labs primary color */
+      margin-bottom: 2rem;
+      }
+
+      /* Sponsor Grid */
+      .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+      gap: 2rem; /* Space between sponsor logos */
+      justify-content: center;
+      align-items: center;
+      }
+
+      /* Sponsor Item */
+      .sponsor-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a1a1a; /* Slightly darker background for each logo */
+      padding: 1rem;
+      border-radius: 10px; /* Rounded corners */
+      transition: transform 0.3s ease;
+      }
+
+      .sponsor-item:hover {
+      transform: scale(1.05); /* Slight zoom effect on hover */
+      }
+
+      /* Sponsor Logo */
+      .sponsor-logo {
+      max-width: 100%; /* Ensure logos are responsive */
+      height: auto; /* Maintain aspect ratio */
+      filter: grayscale(100%); /* Optional: Make logos grayscale */
+      transition: filter 0.3s ease;
+      }
+
+      .sponsor-logo:hover {
+      filter: grayscale(0%); /* Optional: Remove grayscale on hover */
+      }
+      
+    </style>
+  </head>
+  <body class="dark-scheme">
+
+    <!-- Light/Dark Mode Switch -->
+    <div class="mode-switch">
+      <button class="button is-primary" id="modeToggle">
+	<span class="icon">
+          <i class="fas fa-moon"></i>
+	</span>
+      </button>
+    </div>
+
+    <!-- Top Navbar -->
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu">
+	<div class="navbar-start">
+          <a class="navbar-item" id="infrastructure-link">Infrastructure</a>
+          <a class="navbar-item" id="book-lab-link">Book This Lab</a>
+          <a class="navbar-item" href="#sponsor-this-lab">Sponsor This Lab</a>
+          <a class="navbar-item" href="index.html">HCC</a>
+          <a class="navbar-item" href="https://tugraz.at">      <img src="img/logo_TUG.png" alt="Eduardo Veas" style="width: 75px; border-radius: 10px;"/></a>
+	</div>
+      </div>
+    </nav>
+    
+
+    <!-- Infrastructure Modal -->
+    <div class="modal" id="infrastructure-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+	<header class="modal-card-head">
+	  <p class="modal-card-title">Infrastructure</p>
+	  <button class="delete" aria-label="close" id="close-modal"></button>
+	</header>
+	<section class="modal-card-body">
+	  <!-- Image -->
+	  <div class="has-text-centered">
+            <img src="img/infrastructure.jpg" alt="Infrastructure Image" style="max-width: 100%; border-radius: 10px;">
+	  </div>
+	  <!-- List of Items -->
+	  <div class="content" style="margin-top: 1rem;">
+            <ul>
+              <li>ANYbotics Anymal</li>
+              <li>Unitree Aliengo</li>
+              <li>Unitree Z1 ARM</li>
+              <li>Unitree G1 Humanoid Robot</li>
+              <li>TeslaSuit S,M,L</li>
+              <li>Vicon Fullbody Mocap and Object Tracking System: </li>
+              <li>Omnifinity Omnideck</li>
+              <li>HoloLens x 4</li>
+              <li>HTC Vive, Manus VR</li>
+              <li>HP Omnicept</li>
+            </ul>
+	  </div>
+	</section>
+	<footer class="modal-card-foot">
+	  <button class="button is-primary" id="close-modal-footer">Close</button>
+	</footer>
+      </div>
+    </div>
+
+
+    <!-- Book This Lab Modal -->
+    <div class="modal" id="book-lab-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+	<header class="modal-card-head">
+	  <p class="modal-card-title">Book This Lab</p>
+	  <button class="delete" aria-label="close" id="close-book-modal"></button>
+	</header>
+	<section class="modal-card-body">
+	  <!-- Booking Form -->
+	  <form id="booking-form">
+            <!-- Title -->
+            <div class="field">
+              <label class="label">Title</label>
+              <div class="control">
+		<input class="input" type="text" name="title" placeholder="Enter booking title" required>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="field">
+              <label class="label">Description</label>
+              <div class="control">
+		<textarea class="textarea" name="description" placeholder="Enter booking description" required></textarea>
+              </div>
+            </div>
+
+	    <!-- Email -->
+	    <div class="field">
+	      <label class="label">Your Email Address</label>
+	      <div class="control">
+		<input class="input" type="email" name="email" placeholder="Enter your email address" required>
+	      </div>
+	    </div>
+	    
+            <!-- Start Date and Time -->
+            <div class="field">
+              <label class="label">Start Date and Time</label>
+              <div class="control">
+		<input class="input" type="datetime-local" name="start_datetime" required>
+              </div>
+            </div>
+
+            <!-- End Date and Time -->
+            <div class="field">
+              <label class="label">End Date and Time</label>
+              <div class="control">
+		<input class="input" type="datetime-local" name="end_datetime" required>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="field">
+              <div class="control">
+		<button type="submit" class="button is-primary">Submit Booking Request</button>
+              </div>
+            </div>
+	  </form>
+	</section>
+	<footer class="modal-card-foot">
+	  <button class="button" id="close-book-modal-footer">Cancel</button>
+	</footer>
+      </div>
+    </div>
+
+    <!-- Success/Error Message Modal -->
+    <div class="modal" id="message-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+	<header class="modal-card-head">
+	  <p class="modal-card-title" id="message-title"></p>
+	  <button class="delete" aria-label="close" id="close-message-modal"></button>
+	</header>
+	<section class="modal-card-body">
+	  <p id="message-content"></p>
+	</section>
+	<footer class="modal-card-foot">
+	  <button class="button" id="close-message-modal-footer">Close</button>
+	</footer>
+      </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero is-medium is-immersive">
+      <div class="hero-body">
+	<div class="container has-text-centered">
+          <h1 class="title is-1">Immersive Computing Lab</h1>
+          <h2 class="subtitle is-4">Human-Centered Computing @ Graz University of Technology</h2>
+	</div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section">
+      <div class="container mission-vision-container">
+	<div class="mission-vision-content">
+          <h2 class="title is-2 section-header">Mission & Vision</h2>
+          <div class="content">
+            <p>
+	      The Immersive Computing Lab at the Human-Centered Computing (HCC) Group of Graz University of Technology focuses on advancing human-centered AI and immersive technologies that seamlessly blend the physical and digital worlds. Our mission is to develop the next generation of AR/VR computing platforms that enhance human capabilities, enable deep and meaningful remote interactions, and empower individuals to operate in complex, digitally-augmented environments.
+            </p>
+            <p>
+              Our vision is to create immersive systems that redefine collaboration, learning, and telepresence, bridging distances through cutting-edge virtual and robotic interfaces. We aim to augment human perception and action in remote or hazardous environments while ensuring that digital experiences remain intuitive, natural, and socially engaging.
+	      
+            </p>
+          </div>
+	</div>
+	<div class="mission-vision-image">
+          <img src="img/icl-juicemix-ar.jpg" alt="Mission & Vision Image" style="width: 100%; border-radius: 10px;">
+	</div>
+      </div>
+    </section>
+
+
+    <!-- Key Research Areas Section -->
+    <section class="section">
+      <div class="container">
+	<h2 class="title is-2 section-header">Key Research Areas</h2>
+	<div class="columns">
+          <!-- Telepresence and Remote Collaboration -->
+          <div class="column">
+            <div class="card research-card">
+              <div class="card-content">
+		<h3 class="title is-4">Telepresence and Remote Collaboration</h3>
+		<p class="subtitle is-6">
+                  Merging VR, AI, and robotics to create realistic telepresence experiences for work, training, and social interactions.
+		</p>
+              </div>
+            </div>
+          </div>
+          <!-- Extended Reality (XR) for Industrial Applications -->
+          <div class="column">
+            <div class="card research-card">
+              <div class="card-content">
+		<h3 class="title is-4">Extended Reality (XR) for Industrial Applications</h3>
+		<p class="subtitle is-6">
+                  Developing digital twins, mixed reality training, and simulation environments for fields such as mining, manufacturing, and healthcare.
+		</p>
+              </div>
+            </div>
+          </div>
+	</div>
+	<div class="columns">
+          <!-- Neurophysiological and Psychological Impact of Immersion -->
+          <div class="column">
+            <div class="card research-card">
+              <div class="card-content">
+		<h3 class="title is-4">Neurophysiological and Psychological Impact of Immersion</h3>
+		<p class="subtitle is-6">
+                  Investigating how immersive technologies influence human cognition, behavior, and neural activity through collaborations with KFU using VR-integrated MRI studies.
+		</p>
+              </div>
+            </div>
+          </div>
+          <!-- AI-Driven Interaction & Intelligent Assistance -->
+          <div class="column">
+            <div class="card research-card">
+              <div class="card-content">
+		<h3 class="title is-4">AI-Driven Interaction & Intelligent Assistance</h3>
+		<p class="subtitle is-6">
+                  Exploring adaptive AI systems that enhance human-machine collaboration in extended reality settings.
+		</p>
+              </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </section>
+
+    <!-- Latest Achievements Section -->
+    <section class="section latest-achievements">
+      <div class="container">
+	<h2 class="title is-2 section-header">Latest Achievements</h2>
+	<div class="columns">
+
+	  <div class="column">
+            <div class="card">
+              <div class="card-content">
+		<p class="title is-4">Subtle depth cues</p>
+		<p class="subtitle is-6"> We introduce artificial subtle cues to enhance natural depth information in VR.</p>
+		<div class="embedded-media">
+                  <!-- Example YouTube Embed -->
+                  <iframe src="https://www.youtube.com/embed/e5KIINOOvWI" allowfullscreen></iframe>
+		</div>
+		<a href="https://www.youtube.com/watch/e5KIINOOvWI" class="button is-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+		<p class="title is-4"> Eliciting Error Potentials in VR Flight Simulation </p>
+		<p class="subtitle is-6">We studied decoding of error potentials in pupil size data and with hybrid approach combining pupil and EEG signals.</p>
+		<div class="embedded-media">
+                  <!-- Example YouTube Embed -->
+                  <iframe src="https://www.youtube.com/embed/xe5zR_ujTt8" allowfullscreen></iframe>
+		</div>
+		<a href="https://www.youtube.com/watch/xe5zR_ujTt8" class="button is-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+	  <div class="column">
+            <div class="card">
+              <div class="card-content">
+		<p class="title is-4">Immersive Analytics for Motorsports</p>
+		<p class="subtitle is-6">We present novel methods to analyze racing data.</p>
+		<div class="embedded-media">
+                  <!-- Example LinkedIn Embed -->
+		  <iframe src="https://www.youtube.com/embed/ibYgW4uNXlU" allowfullscreen></iframe>
+		</div>
+		<a href="https://www.youtube.com/watch/ibYgW4uNXlU" class="button is-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+	</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <div class="container">
+	<h2 class="title is-2 section-header">Projects</h2>
+	<div class="columns">
+	  <div class="column">
+            <div class="card">
+              <div class="card-content">
+		<!-- Flexbox container for video and text -->
+		<div class="video-text-container">
+		  <!-- Video on the left -->
+		  <!--div class="video-container">
+                      <iframe
+			src="https://www.youtube.com/embed/VIDEO_ID" 
+			allowfullscreen
+			class="responsive-video"
+			></iframe>
+</div -->
+      <div class="image-text-container">
+	<!-- Image on the left -->
+	<div class="image-container">
+	  <img
+            src="img/DSC01820.JPG"                   alt="Project Image"                  class="responsive-image"
+            />
+	</div>
+	<!-- Text on the right -->
+	<div class="text-container">
+	  <p class="title is-4 section-header">Human-Centered Computing Labs: Infrastructure for Telepresence</p>
+	  <p class="subtitle is-6">
+            The infrastructure comprises technologies to develop and study remote work, collaboration, and teleoperation in general with the focus on providing the closest physical experience to being physically present. It is unique in that it comprises complete solutions:
+            <ol class="rlist">
+              <li>Capture and digitalization of remote environments,</li>
+              <li>Immersive experience with extended sensory input and total freedom of motion,</li>
+              <li>Robotic interfaces for remote interaction and teleoperation.</li>
+            </ol>
+            This lab should allow experimentation with diverse technologies to plan deployments and training for efficient remote work. It is intended to allow researchers to deploy new digital technologies focusing on the remote exploration, planning, and operation of equipment with sufficient spatial and overall sensory detail to be indistinguishable or even superior to being physically present.
+	  </p>
+	  <p> This lab is partially funded by the Austrian Federal Ministry of Education, Science and Research through the HCC Telepresence with Robots joint infrastructure lab. </p>
+	  <a href="https://forschungsinfrastruktur.bmbwf.gv.at/en/fi/human-centered-computing-labs_5833" class="button is-primary">Learn More</a>
+	</div>
+      </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Publications Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 section-header">Publications</h2>
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-eeg-counting-th.jpg" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6">
+	    Counting on AR: EEG responses to incongruent information with real-world context</p>
+          <p class="subtitle is-6"> Wimmer, Pepicelli, Volmer, ElSayed, Cunningham, Thomas, Müller-Putz, Veas. 2025. Computers in Biology and Medicine [185] 109483  </p>
+          <div class="publication-links">
+	    <a href="#"><i class="fas fa-link"></i> Project</a>
+	    <a href="https://doi: 10.1016/j.compbiomed.2024.109483"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-depth-asteroid-th.jpg" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6">Subtle Cueing For Improving Depth Perception in Virtual Reality </p>
+          <p class="subtitle is-6">Zaman, Kruijff, Veas, Krajnc, El Sayed, IEEE International Symposium on Mixed and Augmented Reality ISMAR, 2024</p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10765485"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-eeg-incongruent.jpg" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6">EEG-based Incongruency Decoding in AR with sLDA, SVM, and EEGNet </p>
+          <p class="subtitle is-6">Wimmer, Veas, Müller-Putz, Current Directions in Biomedical Engineering, de Grutyer, 2024</p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="https://doi.org/10.1515/cdbme-2024-1106"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-eeg-flight-sim.png" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6"> Multimodal decoding of error processing in a virtual reality flight simulation</p>
+          <p class="subtitle is-6"> Wimmer, Weidinger, Veas, Müller-Putz. Sci Rep 14, 9221 (2024)</p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="https://www.nature.com/articles/s41598-024-59278-y"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-agents.jpg" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6"> Agents of MASK: Mobile Analytics from Situated Knowledge </p>
+          <p class="subtitle is-6"> ElSayed, Veas, Schmalstieg. 2024. Interactions 31, 1</p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="http://dx.doi.org/10.1145/3633521"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/juicemixer.png" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6">AI-Powered Immersive Assistance for Interactive Task Execution in Industrial Environments </p>
+          <p class="subtitle is-6"> Duricic, Weidinger, El Sayed, Kowald, Veas. 2024. In 27th European Conference on Artificial Intelligence.</p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="https://arxiv.org/abs/2407.09147"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-eeg-glider1.jpg" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6">EEG-Based Error Detection Can Challenge Human Reaction Time in a VR Navigation Task </p>
+          <p class="subtitle is-6"> Wimmer, Weidinger; ElSayed; Müller-Putz; Veas. 2024. IEEE International Symposium on Mixed and Augmented Reality ISMAR.</p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="https://doi.org/10.1109/ISMAR59233.2023.00113"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="publication-item">
+      <div class="columns">
+        <div class="column is-2">
+          <img src="img/icl-racing-analytics.jpg" alt="Publication Thumbnail" class="publication-thumbnail">
+        </div>
+        <div class="column is-8">
+          <p class="title is-6"> Immersive Analysis of Spatiotemporal Racing Data</p>
+          <p class="subtitle is-6"> Weidinger, El Sayed, Luzhnica, Schreck, Veas. 2023. ACM Symposium on Spatial User Interaction. </p>
+          <div class="publication-links">
+	    <a href=""><i class="fas fa-link"></i> Project</a>
+	    <a href="https://doi.org/10.1145/3607822.3614542"><i class="fas fa-file-alt"></i> Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Groups Using This Lab Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 section-header">Collaborators and Groups Working in this Lab</h2>
+    <div class="content">
+      	<p>This lab is partially funded by the Austrian Federal Ministry of Education, Science and Research through the HCC Telepresence with Robots joint infrastructure lab. </p>
+      <p>
+        Multiple groups led by world-class renown researchers collaborate with us at the Immersive Computing Lab:
+      </p>
+      <ul>
+	<li><a href="https://people.unisa.edu.au/bruce.thomas">Emeritus Prof. Bruce Thomas</a>, University of South Australia.</li>
+	<li><a href="https://www.tugraz.at/institute/ine/people/gernot-mueller-putz">Prof. Gernot Muller-Putz</a>, Graz University of Technology.</li>	  
+	<li><a href="https://www.rug.nl/staff/a.i.sburlea/?lang=en">Prof. Andreea Sburlea</a>, University of Groningen.</li>
+        <li ><a href="https://www.h-brs.de/de/inf/prof-dr-ernst-kruijff">Prof. Ernst Kruijff </a>, Bonn-Rhein-Sieg University of Applied Sciences. </li>
+
+
+        <li><a href="https://carelab.info/en/kiyoshi-kiyokawa/">Prof. Kiyoshi Kiyokawa</a>, Nara Institute of Science and Technology.</li>
+	<li><a href="https://www.vis.uni-stuttgart.de/team/Schmalstieg/">Prof. Dieter Schmalstieg</a>, Stuttgart University. </li>
+        <li><a href="https://online.tugraz.at/tug_online/visitenkarte.show_vcard?pPersonenId=A6EFE8BE31F95DBB&pPersonenGruppe=3">Prof. Tobias Schreck</a>, Graz University of Technology. </li>          
+      </ul>
+      <p>
+        Interested in our research or want to collaborate? Reach out to us and join our mission to redefine how we perceive and experience reality.
+      </p>
+      <a class="button is-large cta-button" href="#contact">Get in Touch</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section >
+     <section class="section">
+       <div class="container has-text-centered">
+	 <h2 class="title is-2 section-header">Collaborate With Us</h2>
+	 <p class="subtitle is-5">
+           Interested in our research or want to collaborate? Reach out to us and join our mission to redefine how we perceive and experience reality.
+	 </p>
+	 <a class="button is-large cta-button" href="#contact">Get in Touch</a>
+       </div>
+  </section-->
+    
+  <!-- Footer -->
+<footer class="footer">
+
+  <div class="content has-text-centered">
+    <div class="footer-content" style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
+      <div class="footer-text" style="text-align: right;">
+        <p>&copy; 2023, Eduardo Veas, Immersive Computing Lab, HCC Labs, TU Graz</p>
+        <p>Head of Lab: <a href="https://eduveas.github.io" target="_blank">Eduardo Veas</a></p>
+      </div>
+      <img src="img/holoedu-small.jpeg" alt="Eduardo Veas" style="width: 75px; border-radius: 10px;"/>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+    // Light/Dark Mode Toggle
+  // Light/Dark Mode Toggle
+  const modeToggle = document.getElementById('modeToggle');
+  const body = document.body;
+
+  // Check if the user has a preferred color scheme
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+  // Set initial mode based on user preference
+  if (prefersDarkScheme.matches) {
+    body.classList.add('dark-scheme');
+    body.classList.remove('light-scheme');
+    modeToggle.querySelector('.icon i').classList.add('fa-moon');
+  } else {
+    body.classList.add('light-scheme');
+    body.classList.remove('dark-scheme');
+    modeToggle.querySelector('.icon i').classList.add('fa-sun');
+  }
+
+  modeToggle.addEventListener('click', () => {
+    if (body.classList.contains('light-scheme')) {
+      body.classList.remove('light-scheme');
+      body.classList.add('dark-scheme');
+      modeToggle.querySelector('.icon i').classList.remove('fa-sun');
+      modeToggle.querySelector('.icon i').classList.add('fa-moon');
+    } else {
+      body.classList.remove('dark-scheme');
+      body.classList.add('light-scheme');
+      modeToggle.querySelector('.icon i').classList.remove('fa-moon');
+      modeToggle.querySelector('.icon i').classList.add('fa-sun');
+    }
+  });
+
+    // Get the modal and links
+const infrastructureLink = document.getElementById('infrastructure-link');
+const infrastructureModal = document.getElementById('infrastructure-modal');
+const closeModalButtons = document.querySelectorAll('#close-modal, #close-modal-footer');
+
+// Open the modal when "Infrastructure" is clicked
+infrastructureLink.addEventListener('click', () => {
+  infrastructureModal.classList.add('is-active');
+});
+
+// Close the modal when the close button or background is clicked
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    infrastructureModal.classList.remove('is-active');
+  });
+});
+
+// Close the modal when clicking outside the modal
+infrastructureModal.querySelector('.modal-background').addEventListener('click', () => {
+  infrastructureModal.classList.remove('is-active');
+});
+
+// Get elements
+const bookLabLink = document.getElementById('book-lab-link');
+const bookLabModal = document.getElementById('book-lab-modal');
+const closeBookModalButtons = document.querySelectorAll('#close-book-modal, #close-book-modal-footer');
+const bookingForm = document.getElementById('booking-form');
+const messageModal = document.getElementById('message-modal');
+const closeMessageModalButtons = document.querySelectorAll('#close-message-modal, #close-message-modal-footer');
+const messageTitle = document.getElementById('message-title');
+const messageContent = document.getElementById('message-content');
+
+// Open the "Book This Lab" modal
+bookLabLink.addEventListener('click', () => {
+  bookLabModal.classList.add('is-active');
+});
+
+// Close the "Book This Lab" modal
+closeBookModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    bookLabModal.classList.remove('is-active');
+  });
+});
+
+// Handle form submission
+bookingForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Get form data
+  const formData = new FormData(bookingForm);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    // Send data to backend (replace with your backend endpoint)
+    const response = await fetch('https://your-backend-endpoint.com/book-lab', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      // Show success message
+      messageTitle.textContent = 'Success';
+      messageContent.textContent = 'Your booking request has been submitted successfully!';
+      messageModal.classList.add('is-active');
+      bookingForm.reset(); // Reset the form
+    } else {
+      // Show error message
+      messageTitle.textContent = 'Error';
+      messageContent.textContent = 'There was an error submitting your booking request. Please try again.';
+      messageModal.classList.add('is-active');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    messageTitle.textContent = 'Error';
+    messageContent.textContent = 'There was an error submitting your booking request. Please try again.';
+    messageModal.classList.add('is-active');
+  }
+});
+
+// Close the message modal
+closeMessageModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    messageModal.classList.remove('is-active');
+  });
+});
+    
+  </script>
+</body>
+</html>

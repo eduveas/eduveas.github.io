@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human-Centered Computing Labs - TU Graz</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Define CSS Variables for Light and Dark Modes */
+    :root {
+	--background-color: #ffffff; /* Light mode background */
+	--text-color: #333333; /* Light mode text */
+	--navbar-background: #f8f9fa; /* Light mode navbar */
+	--navbar-item-color: #333333; /* Light mode navbar items */
+	--navbar-item-hover: #e9ecef; /* Light mode navbar hover */
+	--box-background: #f8f9fa; /* Light mode box background */
+	--box-text: #333333; /* Light mode box text */
+	--button-primary: #ff6b6b; /* Light mode primary button */
+	--button-primary-hover: #ff4c4c; /* Light mode primary button hover */
+	--lighter-gray: #f8f9fa; /* Light mode lighter gray */
+    }
+
+    [data-theme="dark"] {
+	--background-color: #1a1a1a; /* Dark mode background */
+	--text-color: #ffffff; /* Dark mode text */
+	--navbar-background: #2a2a2a; /* Dark mode navbar */
+	--navbar-item-color: #ffffff; /* Dark mode navbar items */
+	--navbar-item-hover: #3a3a3a; /* Dark mode navbar hover */
+	--box-background: #2a2a2a; /* Dark mode box background */
+	--box-text: #ffffff; /* Dark mode box text */
+	--button-primary: #ff6b6b; /* Dark mode primary button */
+	--button-primary-hover: #ff4c4c; /* Dark mode primary button hover */
+	--lighter-gray: #3a3a3a; /* Dark mode lighter gray */
+    }
+
+    /* Apply CSS Variables to Existing Styles */
+    body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+    }
+
+    .navbar {
+	background-color: var(--navbar-background) !important;
+    }
+
+    .navbar-item {
+	color: var(--navbar-item-color);
+    }
+
+    .navbar-item:hover {
+	background-color: var(--navbar-item-hover);
+    }
+
+    .box {
+	background-color: var(--box-background);
+	color: var(--box-text);
+    }
+
+    .title, .subtitle {
+	color: var(--text-color);
+    }
+
+    /* Button Styles */
+    .button.is-primary {
+	background-color: var(--button-primary);
+	color: var(--box-text); /* Use box-text variable for button text color */
+	border: none;
+    }
+
+    .button.is-primary:hover {
+	background-color: var(--button-primary-hover);
+    }
+
+    /* Hero Section with Image and Gradient Overlay */
+    .hero {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url('img/hcc-lab-background.jpg') no-repeat center center/cover;
+	color: white; /* Ensure text is visible on the image */
+	padding: 4rem 1.5rem;
+    }
+
+    /* Hero Section Button */
+    .hero .button.is-primary {
+	background-color: var(--button-primary);
+	color: var(--box-text); /* Use box-text variable for button text color */
+	border: none;
+    }
+
+    .hero .button.is-primary:hover {
+	background-color: var(--button-primary-hover);
+    }
+
+    /* Media Section */
+    .section {
+	background-color: var(--box-background);
+	padding: 2rem;
+    }
+
+
+    /* Media Section Cards */
+    .section .card {
+	background-color: var(--box-background);
+	border: 1px solid var(--box-background); /* Use box-background for border color */
+	color: var(--text-color);
+	margin-bottom: 1rem;
+    }
+
+    .section .card-content {
+	background-color: var(--box-background);    
+    padding: 1.5rem;
+    	color: var(--text-color);
+    }
+    
+    /* Footer */
+    .footer {
+	background-color: var(--lighter-gray);
+	color: var(--text-color);
+	padding: 2rem;
+    }
+
+    /* Lab-specific color schemes (unchanged) */
+    .immersive-lab {
+	--lab-primary: #3A86FF;
+    }
+    .vehicle-lab {
+	--lab-primary: #8338EC;
+    }
+    .game-lab {
+	--lab-primary: #390099;
+    }
+    .usability-lab {
+	--lab-primary: #FF006E;
+    }
+    .classroom-lab {
+	--lab-primary: #FFBE0B;
+    }
+
+    /* Lab card styles (unchanged) */
+    .lab-card {
+	transition: transform 0.3s ease;
+	border-radius: 10px;
+	background: linear-gradient(135deg, var(--lab-primary), rgba(42, 42, 42, 0.8));
+	border: 1px solid var(--lab-primary);
+    }
+
+    .lab-card:hover {
+	transform: scale(1.05);
+    }
+
+    .icon {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	color: white; /* Icons are now white */
+    }
+
+    .lab-card .button.is-primary {
+	background-color: var(--lab-primary);
+	color: white;
+	border: none;
+    }
+
+    .lab-card .button.is-primary:hover {
+	background-color: var(--lab-primary);
+	filter: brightness(90%);
+    }
+  </style>
+  
+</head>
+<body class="dark-scheme"> <!-- Change to "light-scheme" for light mode -->
+
+  <!-- Navigation Bar -->
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://tugraz.at">
+        <img src="img/logo_TUG.png" alt="TU Graz" width="112" height="28">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarBasic" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#about">About</a>
+        <a class="navbar-item" href="#recent-works">Recent Works</a>
+        <a class="navbar-item" href="#labs">Labs</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero is-primary is-medium">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">Human-Centered Computing Labs</h1>
+        <h2 class="subtitle is-4">Advancing technology to understand and empower humans.</h2>
+        <div class="buttons is-centered">
+          <a class="button is-primary is-large" href="#labs">Explore Our Labs</a>
+          <a class="button is-primary is-large" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-8">
+          <h2 class="title is-2">About HCC Labs</h2>
+          <p class="subtitle is-5">
+            The Human-Centered Computing Labs at Graz University of Technology focus on advancing technology and methods to understand humans and complement their skills. Our interdisciplinary approach aims to design technologies that amplify, augment, empower, and enhance human capabilities.
+          </p>
+          <a class="button is-primary" href="/about">Learn More</a>
+        </div>
+        <div class="column is-4">
+          <figure class="image">
+            <img src="img/hcc-lab-image.jpg" alt="HCC Lab Image">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Works Section -->
+  <section id="recent-works" class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered">Recent Works</h2>
+      <div class="columns">
+        <!-- Recent Work 1 -->
+        <div class="column">
+          <div class="video-thumbnail">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/xfBpcDprkgI" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h3 class="title is-4">Counting on AR</h3>
+          <p class="subtitle is-6"> This work characterizes the brain dynamics associated with processing incongruent information within an AR environment  </p>
+        </div>
+        <!-- Recent Work 2 -->
+        <div class="column">
+          <div class="video-thumbnail">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/-NY_MsebsJk" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h3 class="title is-4">Autonomous Racing Benchmark</h3>
+          <p class="subtitle is-6"> Benchmark for Autonomous Racing with reinforcement learning using human demonstrations.</p>
+        </div>
+        <!-- Recent Work 3 -->
+        <div class="column">
+          <div class="video-thumbnail">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/e5KIINOOvWI" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h3 class="title is-4">Augmented Deph Cues in VR</h3>
+          <p class="subtitle is-6">We designed and evaluated cues to convey depth in VR.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Labs Section -->
+  <section id="labs" class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered">Our Labs</h2>
+      <div class="tile is-ancestor">
+        <!-- Immersive Computing Lab -->
+        <div class="tile is-parent">
+          <article class="tile is-child box lab-card immersive-lab">
+            <div class="icon">
+              <i class="fas fa-vr-cardboard"></i>
+            </div>
+            <p class="title is-4">Immersive Computing Lab</p>
+            <p class="subtitle is-6">Exploring virtual and augmented reality at scale.</p>
+            <a class="button is-primary" href="icl.html">Learn More</a>
+          </article>
+        </div>
+	  
+      <!-- Vehicle-Human Interaction Lab -->
+        <div class="tile is-parent">
+          <article class="tile is-child box lab-card vehicle-lab">
+            <div class="icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <p class="title is-4">Vehicle-Human Interaction Lab</p>
+            <p class="subtitle is-6">Studying the effects of technology on human factors in transportation.</p>
+            <a class="button is-primary" href="vhilab.html">Learn More</a>
+          </article>
+        </div>
+        <!-- Vehicle-Human Interaction Lab -->
+
+	<!-- Game Experience Lab -->
+        <div class="tile is-parent">
+          <article class="tile is-child box lab-card game-lab">
+            <div class="icon">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <p class="title is-4">Game Lab</p>
+            <p class="subtitle is-6">Researching game techonology and serious games in education. </p>
+            <a class="button is-primary" href="https://gamelabgraz.com/">Learn More</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- Additional Labs (Scroll Down) -->
+      <div class="tile is-ancestor">
+        <!-- Usability Lab -->
+        <div class="tile is-parent">
+          <article class="tile is-child box lab-card usability-lab">
+            <div class="icon">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <p class="title is-4">Usability Lab</p>
+            <p class="subtitle is-6">Enabling unobtrusive observation of user experience with novel technologies.</p>
+            <a class="button is-primary" href="usalab.html">Learn More</a>
+          </article>
+        </div>
+        <!-- Classroom Lab (Under Construction) -->
+        <div class="tile is-parent">
+          <article class="tile is-child box lab-card classroom-lab">
+            <div class="icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <p class="title is-4">Classroom Lab</p>
+            <p class="subtitle is-6">Investigating novel technologies in the learning context. <strong>(Under Construction)</strong></p>
+            <a class="button is-primary is-light" disabled>Coming Soon</a>
+          </article>
+        </div>
+      </div>
+
+
+
+
+      </div>
+
+  </section>
+
+  <!-- Floorplan Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered">Explore Our Labs in 3D</h2>
+      <div class="has-text-centered">
+        <iframe src="https://my.matterport.com/show/?m=9GAruaxi4bN" width="100%" height="500px" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered">What the Media Says</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-5">"Through the Eyes of a Robot"</p>
+              <p class="subtitle is-6">TU Graz</p>
+	      <p class="subtitle is-6">Safely entering potentially unsafe areas with a robot from a distance using VR goggles.</p>
+              <a href="https://www.tugraz.at/en/tu-graz/services/news-stories/tu-graz-news/singleview/article/mit-den-augen-des-roboters" class="button is-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-5">"Unique Research Infrastructure"</p>
+              <p class="subtitle is-6">TU Graz</p>
+	      <p class="subtitle is-6">The new laboratory spaces offer the opportunity for interdisciplinary research at the interface of man and machine</p>
+              <a href="https://www.tugraz.at/tu-graz/services/news-stories/medienservice/einzelansicht/article/einzigartige-forschungsinfrastruktur-tu-graz-eroeffnet-human-centered-computing-labs" class="button is-primary"> Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-5">"Neue Labors an TU Graz treiben Human-Centered-Computing voran"</p>
+              <p class="subtitle is-6">Austria Press Agency (APA)</p>
+	      <p class="subtitle is-6">Geleitet wird es von Eduardo Veas, der sich am Institute of Interactive Systems and Data Science speziell mit den Bedürfnissen der Anwenderinnen und Anwender beim Einsatz von neuen Technologien und Computeranwendungen befasst.</p>
+              <a href="https://science.apa.at/power-search/3166994756273801115" class="button is-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-5">"Die Roboter sollen unsere Gedanken lesen"</p>
+              <p class="subtitle is-6"> die Presse</p>
+	      <p class="subtitle is-6"> Reagieren Computer auf Emotionen der Menschen? Ein großer Labor-Zusammenschluss in Graz nutzt auch Gaming-Ansätze, um Technologien wie Künstliche Intelligenz, Roboter und virtuelle Realität zu verbessern.</p>
+              <a href="https://www.diepresse.com/18475834/die-roboter-sollen-unsere-gedanken-lesen" class="button is-primary"> Read More.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <div class="footer-content" style="display: flex; justify-content: flex-end; align-items: center; gap: 1rem;">
+      <div class="footer-text" style="text-align: right;">
+        <p>&copy; 2023, Eduardo Veas, HCC Labs, TU Graz</p>
+        <p>Head of Lab: <a href="https://eduveas.github.io" target="_blank">Eduardo Veas</a></p>
+      </div>
+      <img src="img/holoedu-small.jpeg" alt="Eduardo Veas" style="width: 75px; border-radius: 10px;"/>
+    </div>
+  </div>
+</footer>
+
+
+
+
+    <div class="buttons">
+      <button id="theme-toggle" class="button is-primary">
+        <span class="icon">
+          <i class="fas fa-moon"></i> <!-- Dark mode icon -->
+        </span>
+        <span>Toggle Theme</span>
+      </button>
+    </div>
+
+
+    
+  </footer>
+
+<script>
+  // Get the toggle button
+  const themeToggle = document.getElementById('theme-toggle');
+
+  // Check for saved theme in localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'dark') {
+      themeToggle.innerHTML = `<span class="icon"><i class="fas fa-sun"></i></span><span>Light Mode</span>`;
+    }
+  }
+
+  // Toggle between light and dark mode
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+      themeToggle.innerHTML = `<span class="icon"><i class="fas fa-moon"></i></span><span>Dark Mode</span>`;
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      themeToggle.innerHTML = `<span class="icon"><i class="fas fa-sun"></i></span><span>Light Mode</span>`;
+    }
+  });
+</script>
+  
+</body>
+</html>
